@@ -17,7 +17,6 @@
     "@koa/router": "10.1.1",
     "bcryptjs": "2.4.3",
     "dotenv": "16.0.1",
-    "form-data": "^4.0.0",
     "joi": "17.6.0",
     "jsonwebtoken": "8.5.1",
     "koa": "2.13.4",
