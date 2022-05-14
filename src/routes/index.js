@@ -5,7 +5,7 @@ const BASE_ROUTE = '/api'
 
 const router = new Router()
 
-router.use(`${BASE_ROUTE}/v1/auth`, authRouter.routes())
+router.use(`${BASE_ROUTE}/v1`, authRouter.routes())
 
 router.get('/', ctx => {
   ctx.body = {

@@ -14,7 +14,7 @@ export default function getEmailService() {
       from: `noreply@${MAILGUN_DOMAIN}`,
       to: email,
       subject: 'Confirm your email',
-      text: `Confirm your email by clicking on this link: ${process.env.BASE_URL}/confirm?token=${token}`
+      text: `Confirm your email by clicking on this link: ${process.env.BASE_URL}/api/v1/confirm?token=${token}`
     }
     try {
       return mg.messages().send(data)
