@@ -1,12 +1,16 @@
 import Router from '@koa/router'
-import getAuthControllers from '../controllers/auth.js'
+import {
+  confirm,
+  login,
+  register,
+  verifyToken
+} from '../controllers/index.js'
 
 const authRouter = new Router()
-const controllers = getAuthControllers()
 
-authRouter.post('/register', controllers.register)
-authRouter.post('/login', controllers.login)
-authRouter.post('/confirm', controllers.confirm)
-authRouter.get('/verify', controllers.verifyToken)
+authRouter.post('/register', register)
+authRouter.post('/login', login)
+authRouter.post('/confirm', confirm)
+authRouter.get('/verify', verifyToken)
 
 export default authRouter
